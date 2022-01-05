@@ -1,6 +1,18 @@
-.header_style {
+header {
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  border-bottom: 5px solid red;
+  background-color: red;
+}
+header h1 {
+  border: 1px solid white;
+}
+
+header nav {
+  border: 1px solid white;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
 }
