@@ -1,0 +1,14 @@
+nav {
+  display: flex;
+  justify-content: center;
+  border: 3px solid black;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  width: 10em;
+}

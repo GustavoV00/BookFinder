@@ -1,23 +1,28 @@
 import React, { useContext } from "react";
 
+import { BookContext } from "../../store/Books/BooksProvider";
+
 const DUMMY_DATABASE = [
   {
     id: 1,
     name: "test",
   },
   {
-    id: 1,
+    id: 2,
     name: "test2",
   },
   {
-    id: 1,
+    id: 3,
     name: "test3",
   },
 ];
 
 const Form = (_) => {
+  const [book, setBooks] = useContext(BookContext);
   function submitHandler(event) {
     event.preventDefault();
+    setBooks(DUMMY_DATABASE);
+    console.log(book);
   }
 
   return (

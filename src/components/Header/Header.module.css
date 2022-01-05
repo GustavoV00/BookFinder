@@ -2,20 +2,6 @@ header {
   border: 3px solid red;
 }
 
-header div nav {
-  display: flex;
-  justify-content: center;
-  border: 3px solid black;
-}
-
-header div nav ul {
-  display: flex;
-  list-style: none;
-}
-header div nav ul li {
-  width: 10em;
-}
-
 .change {
   display: grid;
   grid-template-columns: 0.54fr 1fr;
