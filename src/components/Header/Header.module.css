@@ -1,18 +1,37 @@
 header {
+  border: 3px solid red;
+}
+
+header div nav {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: red;
-}
-header h1 {
-  border: 1px solid white;
+  justify-content: center;
+  border: 3px solid black;
 }
 
-header nav {
-  border: 1px solid white;
-}
-
-header ul {
+header div nav ul {
   display: flex;
   list-style: none;
+}
+header div nav ul li {
+  width: 10em;
+}
+
+.change {
+  display: grid;
+  grid-template-columns: 0.54fr 1fr;
+}
+
+.change h1 {
+  text-align: center;
+}
+
+.change form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.change form input {
+  width: 40%;
+  height: 25%;
 }

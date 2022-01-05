@@ -6,6 +6,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 // ROUTES
+import Login from "./routes/Login";
 import Signin from "./routes/Signin";
 import About from "./routes/About";
 import Contact from "./routes/Contact";
@@ -15,6 +16,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/signin" element={<Signin />} />
       <Route path="/about" element={<About />} />
       <Route path="/Contact" element={<Contact />} />

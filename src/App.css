@@ -1,0 +1,6 @@
+.page_layout {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-rows: 15vh;
+}

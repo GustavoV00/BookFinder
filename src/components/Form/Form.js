@@ -1,8 +1,5 @@
 import React, { useContext } from "react";
 
-import classes from "./Form.module.css";
-import { BookContext } from "../../store/Books/BooksProvider";
-
 const DUMMY_DATABASE = [
   {
     id: 1,
@@ -19,18 +16,21 @@ const DUMMY_DATABASE = [
 ];
 
 const Form = (_) => {
-  const [books, setBooks] = useContext(BookContext);
   function submitHandler(event) {
     event.preventDefault();
-    setBooks(DUMMY_DATABASE);
-    console.log(books);
   }
 
   return (
-    <form className={classes.align_form} onSubmit={submitHandler}>
-      <label htmlFor="Book Finder">Book Finder</label>
+    <form onSubmit={submitHandler}>
+      <select>
+        <option value="Keyword">Keyword</option>
+        <option value="Title">Title</option>
+        <option value="Author">Author</option>
+        <option value="Publisher">Publisher</option>
+        <option value="URL">URL</option>
+      </select>
       <input type="text" />
-      <button>Send</button>
+      <button>Search</button>
     </form>
   );
 };
