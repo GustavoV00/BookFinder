@@ -9,5 +9,18 @@
   color: white;
   border: 2px solid orange;
   width: 25%;
-  height: 150px;
+  height: 200px;
+}
+
+.book_card {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+}
+
+.image {
+  background-color: yellow;
+}
+
+ul {
+  list-style: none;
 }

@@ -29,12 +29,16 @@ const Form = (_) => {
     const inputValue = event.target.input.value;
     if (inputValue) {
       const result = getRequestHandler(inputValue);
+      console.log(result);
 
       result.then((items) => {
         items.forEach((item) => {
           test.push({
             id: item.id,
             title: item.volumeInfo.title,
+            categories: item.volumeInfo.categories,
+            authors: item.volumeInfo.authors,
+            published: item.volumeInfo.publishedDate,
           });
         });
         setBooks(test);
