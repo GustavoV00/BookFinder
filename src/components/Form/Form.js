@@ -1,28 +1,45 @@
 import React, { useContext } from "react";
+import axios from "axios";
 
 import { BookContext } from "../../store/Books/BooksProvider";
-
 const DUMMY_DATABASE = [
   {
     id: 1,
-    name: "test",
-  },
-  {
-    id: 2,
-    name: "test2",
-  },
-  {
-    id: 3,
-    name: "test3",
+    volumeInfo: {
+      title: "test",
+    },
   },
 ];
 
 const Form = (_) => {
-  const [book, setBooks] = useContext(BookContext);
+  const [books, setBooks] = useContext(BookContext);
+
+  const getRequestHandler = async (inputValue) => {
+    const result = await axios.get(
+      `https://www.googleapis.com/books/v1/volumes?q=${inputValue}`
+    );
+    const { data } = result;
+    const { items } = data;
+    return items;
+  };
+
   function submitHandler(event) {
     event.preventDefault();
-    setBooks(DUMMY_DATABASE);
-    console.log(book);
+    let test = [];
+    const inputValue = event.target.input.value;
+    if (inputValue) {
+      const result = getRequestHandler(inputValue);
+
+      result.then((items) => {
+        items.forEach((item) => {
+          test.push({
+            id: item.id,
+            title: item.volumeInfo.title,
+          });
+        });
+        setBooks(test);
+      });
+    }
   }
 
   return (
@@ -34,7 +51,7 @@ const Form = (_) => {
         <option value="Publisher">Publisher</option>
         <option value="URL">URL</option>
       </select>
-      <input type="text" />
+      <input type="text" name="input" />
       <button>Search</button>
     </form>
   );

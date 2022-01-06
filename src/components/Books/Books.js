@@ -1,14 +1,18 @@
-import React, { Fragment } from "react";
+import React, { useContext } from "react";
 
-// import { Container } from './styles';
+import { BookContext } from "../../store/Books/BooksProvider";
+import classes from "./Books.module.css";
 
-function Books(props) {
+function Books() {
+  const [books, setBooks] = useContext(BookContext);
   return (
-    <Fragment>
-      {props.books.map((book) => (
-        <span key={book.id}>{book.name}</span>
+    <div className={classes.card}>
+      {books.map((book) => (
+        <div className={classes.book} key={book.id}>
+          {book.title}
+        </div>
       ))}
-    </Fragment>
+    </div>
   );
 }
 

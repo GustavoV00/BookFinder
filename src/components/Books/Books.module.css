@@ -1,0 +1,15 @@
+.card {
+  background-color: aqua;
+  border: 2px solid white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.book {
+  background-color: black;
+  color: white;
+  border: 2px solid orange;
+  width: 25%;
+  height: 150px;
+}
