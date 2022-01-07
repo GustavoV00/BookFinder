@@ -2,14 +2,6 @@ import React, { useContext } from "react";
 import axios from "axios";
 
 import { BookContext } from "../../store/Books/BooksProvider";
-const DUMMY_DATABASE = [
-  {
-    id: 1,
-    volumeInfo: {
-      title: "test",
-    },
-  },
-];
 
 const Form = (_) => {
   const [books, setBooks] = useContext(BookContext);
@@ -33,13 +25,20 @@ const Form = (_) => {
 
       result.then((items) => {
         items.forEach((item) => {
-          test.push({
+          const obj = {
             id: item.id,
             title: item.volumeInfo.title,
             categories: item.volumeInfo.categories,
             authors: item.volumeInfo.authors,
             published: item.volumeInfo.publishedDate,
-          });
+          };
+          try {
+            obj.image = item.volumeInfo.imageLinks.smallThumbnail;
+          } catch {
+            obj.image = "";
+          }
+
+          test.push(obj);
         });
         setBooks(test);
       });

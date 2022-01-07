@@ -11,7 +11,12 @@ function Books() {
         <div className={classes.book} key={book.id}>
           <h4>{book.title}</h4>
           <div className={classes.book_card}>
-            <div className={classes.image}></div>
+            {book.image === "" ? (
+              <div className={classes.image}>No image</div>
+            ) : (
+              <img src={book.image} alt="Book" className={classes.image} />
+            )}
+
             <ul>
               <li>{book.categories}</li>
               <li>{book.authors}</li>
