@@ -8,7 +8,7 @@ React (States and Context API) and axios to consume de Google Book Api
 
 ## Note
 
-I just used some random colors, the objective was just do something with react.
+I have used some random colors, the objective was just do something with react.
 
 ## How to use:
 
