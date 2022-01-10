@@ -11,6 +11,8 @@ React and axios to consume de Google Book Api
 I just use some random colors, the objective was just do someting with react.
 
 
+## How to use:
+
 ### `npm start`
 
 Runs the app in the development mode.\
