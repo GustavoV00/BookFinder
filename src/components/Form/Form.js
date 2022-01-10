@@ -19,9 +19,9 @@ const Form = (_) => {
     event.preventDefault();
     let test = [];
     const inputValue = event.target.input.value;
+
     if (inputValue) {
       const result = getRequestHandler(inputValue);
-      console.log(result);
 
       result.then((items) => {
         items.forEach((item) => {
@@ -31,7 +31,11 @@ const Form = (_) => {
             categories: item.volumeInfo.categories,
             authors: item.volumeInfo.authors,
             published: item.volumeInfo.publishedDate,
+            description: item.volumeInfo.description
+              ? item.volumeInfo.description
+              : "",
           };
+
           try {
             obj.image = item.volumeInfo.imageLinks.smallThumbnail;
           } catch {
@@ -47,13 +51,6 @@ const Form = (_) => {
 
   return (
     <form onSubmit={submitHandler}>
-      <select>
-        <option value="Keyword">Keyword</option>
-        <option value="Title">Title</option>
-        <option value="Author">Author</option>
-        <option value="Publisher">Publisher</option>
-        <option value="URL">URL</option>
-      </select>
       <input type="text" name="input" />
       <button>Search</button>
     </form>

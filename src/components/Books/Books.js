@@ -3,8 +3,9 @@ import React, { useContext } from "react";
 import { BookContext } from "../../store/Books/BooksProvider";
 import classes from "./Books.module.css";
 
-function Books() {
+function Books(props) {
   const [books, setBooks] = useContext(BookContext);
+
   return (
     <div className={classes.card}>
       {books.map((book) => (
@@ -18,10 +19,11 @@ function Books() {
             )}
 
             <ul>
-              <li>{book.categories}</li>
-              <li>{book.authors}</li>
-              <li>{book.published}</li>
+              <li>Categories: {book.categories}</li>
+              <li>Authors: {book.authors}</li>
+              <li>Published: {book.published}</li>
             </ul>
+            {/* <button onClick={() => props.onSetModal(true)}>More Infos</button> */}
           </div>
         </div>
       ))}
