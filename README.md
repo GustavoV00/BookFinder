@@ -8,8 +8,7 @@ React and axios to consume de Google Book Api
 
 ## Note
 
-I just use some random colors, the objective was just do someting with react.
-
+I just used some random colors, the objective was just do something with react.
 
 ## How to use:
 
