@@ -4,7 +4,7 @@ Web app made using the google book api
 
 ## Technologies
 
-React and axios to consume de Google Book Api
+React (States and Context API) and axios to consume de Google Book Api
 
 ## Note
 
