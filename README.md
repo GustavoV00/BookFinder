@@ -1,20 +1,18 @@
 # BookFinder
 
-Web app made using the google book api
+Uma aplicação web utilizando React.js.
 
 ## Technologies
 
-React (States and Context API) and axios to consume de Google Book Api
+React (States and Context API) e axios para consumir api do Google Book Api.
 
-## Note
+## Nota
 
-I have used some random colors, the objective was just do something with react.
+As cores são aleatórias, o objetivo do projeto era apenas fazer alguma coisa utilizando o react.js.
 
-## How to use:
+## Como usar:
 
-`npm install` and `npm start`
+`npm install` e `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
+npm start roda a aplicação em modo desenvolvedor, 
+Abrir em [http://localhost:3000](http://localhost:3000) para ver a aplicação.
