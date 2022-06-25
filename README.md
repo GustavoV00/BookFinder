@@ -2,7 +2,7 @@
 
 Uma aplicação web utilizando React.js.
 
-## Technologies
+## Tecnologias
 
 React (States and Context API) e axios para consumir api do Google Book Api.
 
